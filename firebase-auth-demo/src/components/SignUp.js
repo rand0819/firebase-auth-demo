@@ -6,6 +6,8 @@ const SignUp = ({history}) => {
     const handleSignUp = useCallback(async event => {
         event.preventDefault();
         const {email, password} = event.target.elements;
+        console.log(app.options);
+
         try {
             await app.auth()
                 .createUserWithEmailAndPassword(email.value, password.value);

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import { AuthProvider } from './Auth';
+import PrivateRoute from "./PrivateRoute"
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <AuthProvider>
       <Router>
         <div>
-          <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
         </div>
